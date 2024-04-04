@@ -115,14 +115,18 @@ function palindrome($string) {
 
 // Contoh pemanggilan fungsi
 echo 'palindrome("katak") => ' . (palindrome("katak") ? 'true' : 'false') . "<br>"; // Output: true
-echo 'palindrome("jambu") => ' . (palindrome("jambu") ? 'true' : 'false'); // Output: false
+echo 'palindrome("jambu") => ' . (palindrome("jambu") ? 'true' : 'false')."<br>"; // Output: false
 
 
 // Hapus komentar di bawah ini untuk jalankan code
-// palindrome("civic") ; // true
-// palindrome("nababan") ; // true
-// palindrome("jambaban"); // false
-// palindrome("racecar"); // true
+//echo palindrome("civic") ; // true
+echo 'palindrome("civic") => ' . (palindrome("civic") ? 'true' : 'false') . "<br>"; // Output: false
+//echo palindrome("nababan") ; // true
+echo 'palindrome("nababan") => ' . (palindrome("nababan") ? 'true' : 'false') . "<br>"; // Output: false
+//echo palindrome("jambaban"); // false
+echo 'palindrome("jambaban") => ' . (palindrome("jambaban") ? 'true' : 'false') . "<br>"; // Output: false
+//echo palindrome("racecar"); // true
+echo 'palindrome("racecar") => ' . (palindrome("racecar") ? 'true' : 'false') . "<br>"; // Output: false
 
 
 echo "<h3>Soal No 4 Tentukan Nilai </h3>";
