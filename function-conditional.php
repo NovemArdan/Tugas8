@@ -24,11 +24,19 @@ Output: "Halo Abduh, Selamat Datang di Sanbercode!"
 
 // Code function di sini
 
+function greetings($name) {
+    $formattedName = ucfirst($name); // Mengubah huruf pertama nama menjadi kapital
+    return "Halo $formattedName, Selamat Datang di Sanbercode!";
+}
+
+
+echo greetings("abduh");
+
 
 // Hapus komentar untuk menjalankan code!
-// greetings("Bagas");
-// greetings("Wahyu");
-// greetings("nama peserta");
+echo greetings("Bagas"); echo "<br>";
+echo greetings("Wahyu"); echo "<br>";
+//echo greetings("nama peserta"); echo "<br>";
 
 echo "<br>";
 
@@ -48,10 +56,26 @@ Output: ludba
 // Code function di sini 
 
 
+function reverseString($string) {
+    $reversed = ''; // Inisialisasi string kosong untuk menyimpan string terbalik
+    $length = strlen($string); // Mendapatkan panjang string
+
+    // Looping untuk mengambil setiap karakter dari string secara terbalik
+    for ($i = $length - 1; $i >= 0; $i--) {
+        $reversed .= $string[$i]; // Menambahkan karakter terbalik ke string yang disimpan
+    }
+
+    return $reversed;
+}
+
+// Contoh pemanggilan fungsi
+echo reverseString("abdul"); // Output: ludba
+
+
 // Hapus komentar di bawah ini untuk jalankan Code
-// reverseString("nama peserta");
-// reverseString("Sanbercode");
-// reverseString("We Are Sanbers Developers")
+echo reverseString("nama peserta"); echo "<br>";
+echo reverseString("Sanbercode"); echo "<br>";
+echo reverseString("We Are Sanbers Developers"); echo "<br>";
 echo "<br>";
 
 echo "<h3>Soal No 3 Palindrome </h3>";
@@ -72,6 +96,28 @@ NB: DILARANG menggunakan built-in function PHP seperti strrev() dll. Gunakan loo
 
 // Code function di sini
 
+function palindrome($string) {
+    $reversed = ''; // Inisialisasi string kosong untuk menyimpan string terbalik
+    $length = strlen($string); // Mendapatkan panjang string
+
+    // Looping untuk mengambil setiap karakter dari string secara terbalik
+    for ($i = $length - 1; $i >= 0; $i--) {
+        $reversed .= $string[$i]; // Menambahkan karakter terbalik ke string yang disimpan
+    }
+
+    // Memeriksa apakah string asli sama dengan string terbalik
+    if ($string === $reversed) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Contoh pemanggilan fungsi
+echo 'palindrome("katak") => ' . (palindrome("katak") ? 'true' : 'false') . "<br>"; // Output: true
+echo 'palindrome("jambu") => ' . (palindrome("jambu") ? 'true' : 'false'); // Output: false
+
+
 // Hapus komentar di bawah ini untuk jalankan code
 // palindrome("civic") ; // true
 // palindrome("nababan") ; // true
@@ -90,11 +136,26 @@ sama dengan 60 dan lebih kecil dari 70 maka akan mereturn string “Cukup” sel
 
 // Code function di sini
 
+function tentukan_nilai($nilai) {
+    if ($nilai >= 85 && $nilai <= 100) {
+        return "Sangat Baik";
+    } elseif ($nilai >= 70 && $nilai < 85) {
+        return "Baik";
+    } elseif ($nilai >= 60 && $nilai < 70) {
+        return "Cukup";
+    } else {
+        return "Kurang";
+    }
+}
+
+// Contoh pemanggilan fungsi
+echo tentukan_nilai(90); // Output: Sangat Baik
+
 // Hapus komentar di bawah ini untuk jalankan code
-// echo tentukan_nilai(98); //Sangat Baik
-// echo tentukan_nilai(76); //Baik
-// echo tentukan_nilai(67); //Cukup
-// echo tentukan_nilai(43); //Kurang
+ echo tentukan_nilai(98); echo "<br>"; //Sangat Baik
+ echo tentukan_nilai(76); echo "<br>"; //Baik
+ echo tentukan_nilai(67); echo "<br>"; //Cukup
+ echo tentukan_nilai(43); echo "<br>";//Kurang
 
 
 ?>
